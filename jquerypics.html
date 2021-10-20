@@ -1,0 +1,101 @@
+<html>
+<head>
+<title></title>
+
+<!-- Google Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<!-- JQuery starts here: -->
+	<script type="text/javascript">
+
+		$("document").ready( function() {
+			
+			// Using class=".conlinks" for all the links
+			$(".conlinks").click( function () {
+			
+			// $(this): is a reference to the link with their "ids"!!!!
+				var filename = $(this).attr("id");
+				
+				var imgtag = "<img src='http://newton.ncc.edu/gansonj/ite254/img/" + filename + ".jpg'>";
+				$("#output").hide();
+				$("#output").html( imgtag );
+				$("#output").show( "fade", 3000 );
+
+			} );//end of all links event handler using a class="conlinks" from each link
+
+		} ); // ends document.ready
+	</script>
+
+<style type="text/css">
+
+body {
+	background: #CCCC99;
+	color: black;
+	font-family: arial;
+	text-align: center;
+}
+
+#header {
+	margin: 25px 150px 0px 150px;
+	color: white;
+	background: #003366;
+	font-weight: bold;
+	font-size: 1.45em;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	padding: 20px 0px 20px 0px;
+}
+
+#contentwrap {
+	margin: 0px 150px 0px 150px;
+	height: 500px;
+	background: #FFFFFF;
+	border: 2px solid #003366;
+	padding: 20px 0px 10px 0px;
+}
+
+#footer {
+	margin: 0px 150px 0px 150px;
+	background: #003366;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	padding: 30px 0px 30px 0px;
+}
+
+.spacer {
+  margin-bottom: 8px;
+}
+
+
+</style>
+
+</head>
+<body>
+<!--
+	http://newton.ncc.edu/gansonj/ite254/img/xboxone.jpg
+	http://newton.ncc.edu/gansonj/ite254/img/ps4.jpg
+	http://newton.ncc.edu/gansonj/ite254/img/wiiu.jpg
+-->
+<div id="header">
+Click link to display picture
+</div>
+	
+<div id="contentwrap">
+
+    <div class="spacer" ><a href="javascript:void(0);" id="xboxone" class="conlinks">Show picture of XBOX One</a></div>
+    <div class="spacer" ><a href="javascript:void(0);" id="ps4" class="conlinks">Show picture of PS4</a></div>
+    <div class="spacer" ><a href="javascript:void(0);" id="wiiu" class="conlinks">Show picture of Wii</a></div>
+
+<div id="output"></div>
+</div> <!-- ends div#contentwrap -->
+<div id="footer"></div>
+</body>
+</html>
+
+
+
+
+
+
+
